@@ -118,7 +118,7 @@ export function ExperienceModal({
                     fontSize: 10.5,
                     fontWeight: 900,
                     fontFamily: 'var(--font-mono)',
-                    background: content.type === 'demo' ? '#ff666d' : '#ffd329',
+                    background: content.type === 'demo' ? '#FF3385' : '#ffd329',
                     color: content.type === 'demo' ? '#ffffff' : '#080808',
                   }}
                 >
@@ -165,7 +165,7 @@ export function ExperienceModal({
                   {React.createElement(chapters[activeChapter].icon, {
                     style: { width: 48, height: 48, color: '#ffd329', marginBottom: 12 },
                   })}
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.08em', color: '#ff777d', fontWeight: 900, textTransform: 'uppercase' }}>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.08em', color: '#FF4D97', fontWeight: 900, textTransform: 'uppercase' }}>
                     MODUL: {chapters[activeChapter].title}
                   </span>
                   <p style={{ margin: '8px 0 0', maxWidth: 440, fontSize: 13.5, color: '#cbd5e1', lineHeight: 1.5, fontWeight: 600 }}>

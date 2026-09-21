@@ -37,11 +37,11 @@ const contactChannels = [
   {
     id: 'email',
     label: 'OFFICIAL INQUIRIES',
-    labelColor: '#ff666d',
+    labelColor: '#FF3385',
     title: 'Email Farid',
     subtitle: 'faridchairulazhar@gmail.com',
     href: 'mailto:faridchairulazhar@gmail.com',
-    iconBg: '#ff666d',
+    iconBg: '#FF3385',
     icon: <Mail style={{ width: 26, height: 26 }} />,
     iconColor: '#ffffff',
   },
