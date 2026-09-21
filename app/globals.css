@@ -294,17 +294,42 @@ a { color: inherit; text-decoration: none; }
 .project-git-btn { display: inline-flex; align-items: center; gap: 7px; border: 2.5px solid var(--border); background: var(--soft); color: var(--foreground); border-radius: 10px; box-shadow: 3px 3px 0 var(--border); padding: 9px 16px; font-size: 13.5px; font-weight: 850; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
 .project-git-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--border); }
 
-/* Project Video Preview */
-.project-video-preview { position: relative; width: calc(100% + 64px); margin: -32px -32px 0; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 25px 25px 0 0; border-bottom: 3px solid var(--border); cursor: pointer; background: #0c0f17; }
-.project-video-element { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-.project-video-preview:hover .project-video-element { transform: scale(1.03); }
-.project-video-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(160deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 100%); transition: opacity 0.3s ease; }
-.project-video-overlay--hidden { opacity: 0; pointer-events: none; }
-.project-video-play-btn { display: grid; place-items: center; width: 52px; height: 52px; border: 3px solid rgba(255,255,255,0.9); border-radius: 50%; background: rgba(255,255,255,0.15); backdrop-filter: blur(6px); transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease; }
-.project-video-preview:hover .project-video-play-btn { transform: scale(1.12); background: rgba(255,255,255,0.25); }
-.project-video-play-icon { width: 20px; height: 20px; color: #ffffff; margin-left: 2px; }
-.project-video-hover-hint { font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: rgba(255,255,255,0.8); letter-spacing: 0.08em; text-transform: uppercase; }
-@media (max-width: 560px) { .project-video-preview { width: calc(100% + 40px); margin: -20px -20px 0; } }
+/* Project Video Preview — Banner Strip + Modal */
+.pvp-banner { display: flex; align-items: center; justify-content: space-between; gap: 14px; background: var(--soft); border: 2.5px solid var(--border); border-radius: 14px; padding: 12px 14px; }
+.pvp-banner-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.pvp-icon-box { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; background: var(--coral); border: 2.5px solid var(--border); box-shadow: 2.5px 2.5px 0 var(--border); flex-shrink: 0; color: #ffffff; }
+.pvp-icon { width: 18px; height: 18px; }
+.pvp-banner-info { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.pvp-label { font-family: var(--font-mono); font-size: 10px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); white-space: nowrap; }
+.pvp-title { font-size: 13px; font-weight: 800; color: var(--foreground); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
+.pvp-play-btn { display: inline-flex; align-items: center; gap: 7px; background: var(--accent); border: 2.5px solid var(--border); border-radius: 10px; box-shadow: 3px 3px 0 var(--border); padding: 9px 16px; font-size: 13px; font-weight: 900; color: #080808; cursor: pointer; white-space: nowrap; flex-shrink: 0; font-family: var(--font-sans); transition: transform 0.15s, box-shadow 0.15s; }
+.pvp-play-btn:hover { transform: translate(1.5px, 1.5px); box-shadow: 1.5px 1.5px 0 var(--border); }
+.pvp-play-btn-icon { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* Video Modal */
+.pvp-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.86); backdrop-filter: blur(8px); z-index: 9999; display: grid; place-items: center; padding: 20px; }
+.pvp-modal-card { position: relative; width: min(960px, 100%); background: var(--card); border: 3px solid var(--border); border-radius: 20px; box-shadow: 10px 10px 0 var(--border); display: flex; flex-direction: column; overflow: hidden; max-height: 90vh; }
+.pvp-modal-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 22px; border-bottom: 2.5px solid var(--border); background: var(--background); flex-shrink: 0; }
+.pvp-modal-header-left { display: flex; flex-direction: column; gap: 2px; }
+.pvp-modal-label { font-family: var(--font-mono); font-size: 10px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); }
+.pvp-modal-title { margin: 0; font-size: 17px; font-weight: 900; letter-spacing: -0.02em; color: var(--foreground); }
+.pvp-modal-close { display: grid; place-items: center; width: 36px; height: 36px; border: 2.5px solid var(--border); border-radius: 8px; background: var(--coral); color: #ffffff; cursor: pointer; box-shadow: 2px 2px 0 var(--border); flex-shrink: 0; transition: transform 0.15s; }
+.pvp-modal-close:hover { transform: scale(1.08); }
+.pvp-modal-close svg { width: 16px; height: 16px; }
+.pvp-modal-body { background: #0c0f17; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.pvp-video { width: 100%; max-height: 70vh; display: block; object-fit: contain; }
+
+/* Responsive */
+@media (max-width: 560px) {
+  .pvp-banner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .pvp-play-btn { width: 100%; justify-content: center; }
+  .pvp-title { max-width: 100%; }
+  .pvp-modal-card { border-radius: 16px; }
+}
+@media (max-width: 480px) {
+  .pvp-modal-overlay { padding: 12px; }
+  .pvp-video { max-height: 60vh; }
+}
 
 /* Enhanced Education */
 .education-card-enhanced { padding: 34px 38px; display: flex; flex-direction: column; gap: 24px; margin-top: 38px; }
