@@ -15,6 +15,8 @@ function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const hasActions = project.liveUrl || project.githubUrl || project.previewVideoUrl
+
   return (
     <motion.article
       className="neo-card project-card"
@@ -22,13 +24,6 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.08 }}
     >
-      {project.previewVideoUrl && (
-        <ProjectVideoPreview
-          videoUrl={project.previewVideoUrl}
-          projectTitle={project.title}
-        />
-      )}
-
       <div className="project-top-row">
         <span className="mono-label">{project.category}</span>
         <span className="project-number-badge">0{index + 1}</span>
@@ -75,7 +70,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </div>
       </div>
 
-      {(project.liveUrl || project.githubUrl) && (
+      {hasActions && (
         <div className="project-actions-row">
           {project.liveUrl && (
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-live-btn">
@@ -86,6 +81,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-git-btn">
               <GithubIcon aria-hidden="true" /> Source Code
             </a>
+          )}
+          {project.previewVideoUrl && (
+            <ProjectVideoPreview videoUrl={project.previewVideoUrl} projectTitle={project.title} />
           )}
         </div>
       )}
