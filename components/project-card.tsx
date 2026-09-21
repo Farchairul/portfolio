@@ -3,6 +3,7 @@
 import { motion } from 'motion/react'
 import { ExternalLink, CheckCircle2 } from 'lucide-react'
 import { Project } from '@/types/portfolio'
+import { ProjectVideoPreview } from '@/components/project-video-preview'
 
 function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -21,6 +22,13 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.08 }}
     >
+      {project.previewVideoUrl && (
+        <ProjectVideoPreview
+          videoUrl={project.previewVideoUrl}
+          projectTitle={project.title}
+        />
+      )}
+
       <div className="project-top-row">
         <span className="mono-label">{project.category}</span>
         <span className="project-number-badge">0{index + 1}</span>

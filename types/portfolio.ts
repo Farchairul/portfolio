@@ -46,6 +46,7 @@ export type Project = {
   liveUrl?: string
   githubUrl?: string
   image?: string
+  previewVideoUrl?: string
 }
 
 export type Certificate = {

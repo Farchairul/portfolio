@@ -92,6 +92,7 @@ export const projects: Project[] = [
     ],
     tags: ['Laravel', 'PHP', 'Flask', 'Python', 'MySQL'],
     githubUrl: 'https://github.com/Farchairul/academyntm',
+    previewVideoUrl: 'https://github.com/Farchairul/portfolio/releases/download/v1.0.0-previews/Preview_Academy._Next_Top_Model.mp4',
   },
   {
     id: 'umkm-laundry-website',
@@ -105,6 +106,7 @@ export const projects: Project[] = [
     ],
     tags: ['Laravel', 'Blade', 'MySQL', 'Figma'],
     githubUrl: 'https://github.com/Farchairul/umkmlaundry',
+    previewVideoUrl: 'https://github.com/Farchairul/portfolio/releases/download/v1.0.0-previews/Preview_Web_UMKM_Laundry.mp4',
   },
   {
     id: 'explainable-ecg-diagnosis',
@@ -131,6 +133,7 @@ export const projects: Project[] = [
     ],
     tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
     githubUrl: 'https://github.com/Farchairul/oryzadetect',
+    previewVideoUrl: 'https://github.com/Farchairul/portfolio/releases/download/v1.0.0-previews/Preview_OryzaDetect.mp4',
   },
   {
     id: 'wayang-classification',
@@ -144,6 +147,7 @@ export const projects: Project[] = [
     ],
     tags: ['Python', 'TensorFlow', 'Keras', 'EfficientNet', 'Flask', 'React', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/Farchairul/klasifikasi-wayang',
+    previewVideoUrl: 'https://github.com/Farchairul/portfolio/releases/download/v1.0.0-previews/Preview_Klasifikasi_Wayang.mp4',
   },
   {
     id: 'skin-disease-classification',
@@ -170,6 +174,7 @@ export const projects: Project[] = [
     ],
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Three.js', 'GSAP', 'Framer Motion', 'Recharts', 'Dnd Kit'],
     githubUrl: 'https://github.com/Farchairul/taktikbola',
+    previewVideoUrl: 'https://github.com/Farchairul/portfolio/releases/download/v1.0.0-previews/Preview_TaktikBola.mp4',
   },
   {
     id: 'outdoor-equipment-rental-pos',
