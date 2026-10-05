@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
 
 export const organizationExperiences: OrganizationExperience[] = [
   {
-    organization: 'SNAP Photography Universitas Gunadarma – Depok, Indonesia',
+    organization: 'SNAP Photography Gunadarma University – Depok, Indonesia',
     role: 'Staff Of External Public Relations Division',
     period: 'Sep 2023 – Aug 2024',
     description: 'Organisational Internal Campus',
@@ -198,7 +198,7 @@ export const certificates: Certificate[] = [
     year: '2026',
     date: 'June 06, 2026',
     title: 'Data Science Course (Case 2)',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 079318',
     description: 'Advanced Data Science Case 2 training covering data collection, data exploration, cleansing, validation, feature construction, data labeling, machine learning modeling, evaluation, and model deployment to production.',
     competencies: [
@@ -216,7 +216,7 @@ export const certificates: Certificate[] = [
     year: '2025',
     date: 'September 27, 2025',
     title: 'Data Science Course (Case 1)',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 136371',
     description: 'Fundamental Data Science Case 1 training covering case study data collection, data exploration and cleaning, validation, feature engineering, labeling, machine learning modeling, and model evaluation.',
     competencies: [
@@ -251,7 +251,7 @@ export const certificates: Certificate[] = [
     year: '2025',
     date: 'August 18, 2025',
     title: 'Oracle for Intermediate Level',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 128846',
     description: 'Intermediate Oracle training covering table creation and management, constraint handling, views, sub-queries, explicit cursors, and exception handling.',
     competencies: [
@@ -269,7 +269,7 @@ export const certificates: Certificate[] = [
     year: '2024',
     date: 'August 19, 2024',
     title: 'Oracle for Beginners',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 949594',
     description: 'Beginner Oracle training covering Oracle 11g installation, database design, user creation, single-row functions, and basic PL/SQL programming.',
     competencies: [
@@ -287,7 +287,7 @@ export const certificates: Certificate[] = [
     year: '2024',
     date: 'February 19, 2024',
     title: 'SQL Server for Beginners',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 426209',
     description: 'Microsoft SQL Server database administration and management training covering table creation, security & user roles, SQL functions, table joins, and control structures.',
     competencies: [
@@ -305,7 +305,7 @@ export const certificates: Certificate[] = [
     year: '2024',
     date: 'February 19, 2024',
     title: 'Fundamentals of Web Programming',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 143411',
     description: 'Fundamental Web Programming training covering introduction to web development, Go programming, control structures, J2EE servlets, JSP, ASP.NET C#, and server controls.',
     competencies: [
@@ -323,7 +323,7 @@ export const certificates: Certificate[] = [
     year: '2024',
     date: 'March 5-9, 2024',
     title: 'Head of Sponsorship Division: SNAP 31 Photography Exhibition',
-    issuer: 'SNAP Photography Universitas Gunadarma',
+    issuer: 'SNAP Photography Gunadarma University',
     certNo: 'Participation Certificate',
     description: 'Certificate of recognition for serving as Head of Sponsorship Division for the SNAP 31 Young Members Photography Exhibition.',
     competencies: [
@@ -338,7 +338,7 @@ export const certificates: Certificate[] = [
     year: '2023',
     date: 'March 16, 2023',
     title: 'Head of Event Division: Capture Your Imagination Photography Seminar',
-    issuer: 'SNAP Photography Universitas Gunadarma',
+    issuer: 'SNAP Photography Gunadarma University',
     certNo: 'Organizing Committee Certificate',
     description: 'Certificate of recognition for serving as Head of Event Division for the Photography Seminar Capture Your Imagination: Visualize Imagination with Photography.',
     competencies: [
@@ -353,7 +353,7 @@ export const certificates: Certificate[] = [
     year: '2023',
     date: 'March 16, 2023',
     title: 'Master of Ceremony (MC): Capture Your Imagination Photography Seminar',
-    issuer: 'SNAP Photography Universitas Gunadarma',
+    issuer: 'SNAP Photography Gunadarma University',
     certNo: 'Certificate of Appreciation',
     description: 'Certificate of appreciation for hosting and guiding the Photography Seminar Capture Your Imagination: Visualize Imagination with Photography.',
     competencies: [
@@ -368,7 +368,7 @@ export const certificates: Certificate[] = [
     year: '2023',
     date: 'February 20, 2023',
     title: 'Fundamentals of Database Management Systems',
-    issuer: 'Universitas Gunadarma',
+    issuer: 'Gunadarma University',
     certNo: 'NO. 182079',
     description: 'Fundamental DBMS training covering relational database concepts, DDL & DML in MySQL, SQL Server, and data manipulation syntax in Oracle.',
     competencies: [
