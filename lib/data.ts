@@ -1,11 +1,11 @@
 import { Experience, OrganizationExperience, Project, Certificate, SkillGroup } from '@/types/portfolio'
 
 export const navItems = [
-  { label: 'About', href: '/about' },
-  { label: 'Experience', href: '/experience' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Certificates', href: '/certificates' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Certificates', href: '#certificates' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export const skillGroups: SkillGroup[] = [
@@ -23,11 +23,12 @@ export const experiences: Experience[] = [
     role: 'Data Analyst Division',
     period: 'Feb 2026 – Jun 2026',
     highlights: [
-      'Built a Tableau dashboard using 5,525 patient visits across 5 polyclinics to track waiting times, payment methods, and patient demographics.',
-      'Analyzed 1,524 cases with 60+ minute waiting times, finding longer waits among elderly BPJS patients visiting in the morning with 389 visits averaging 74.4 minutes.',
-      'Analyzed 187 hotel customer reviews to find common service issues and rating patterns for improvement recommendations.',
+      'Cleaned 5,500 outpatient visit records (blank rows, inconsistent labels, durations stored as text) and built a Tableau dashboard (KPIs: waiting time, payment method, demographics) across 5 polyclinics.',
+      'Found 27.7% of visits (1,519) waited 60+ minutes; Internal Medicine and Cardiology averaged 77–78 min vs 42 min in other clinics.',
+      'Validated a field report on long waits using dashboard filters: elderly BPJS patients registered before noon in Internal Medicine waited 151.9 min on average (93 visits) vs 69.3 min for other patients in the same clinic.',
+      'Analyzed 74 hotel reviews by aspect (staff, room, facilities, value for money, check-in) with Python and the Gemini API; Facilities and Room Quality had the most negative reviews.',
     ],
-    tags: ['Excel', 'Spreadsheet', 'Tableau'],
+    tags: ['Excel', 'Spreadsheet', 'Tableau', 'Python', 'Gemini API', 'SQL'],
   },
 ]
 
@@ -316,6 +317,51 @@ export const certificates: Certificate[] = [
     image: '/certificates/ug-fundamental-web-programming.png',
     page2Image: '/certificates/ug-fundamental-web-programming-page2.png',
     pdfUrl: '/certificates/ug-fundamental-web-programming.pdf',
+  },
+  {
+    badge: { label: 'Organization', styleClass: 'cert-badge-yellow' },
+    year: '2024',
+    date: 'March 5-9, 2024',
+    title: 'Head of Sponsorship Division: SNAP 31 Photography Exhibition',
+    issuer: 'SNAP Photography Universitas Gunadarma',
+    certNo: 'Participation Certificate',
+    description: 'Certificate of recognition for serving as Head of Sponsorship Division for the SNAP 31 Young Members Photography Exhibition.',
+    competencies: [
+      'Sponsorship Acquisition & Partner Pitching',
+      'Media Partnerships & Brand Collaboration (14 Media Partners)',
+      'Event Funding & Cross-Division Team Leadership',
+    ],
+    image: '/certificates/snap-kadiv-sponsor-2024.png',
+  },
+  {
+    badge: { label: 'Organization', styleClass: 'cert-badge-yellow' },
+    year: '2023',
+    date: 'March 16, 2023',
+    title: 'Head of Event Division: Capture Your Imagination Photography Seminar',
+    issuer: 'SNAP Photography Universitas Gunadarma',
+    certNo: 'Organizing Committee Certificate',
+    description: 'Certificate of recognition for serving as Head of Event Division for the Photography Seminar Capture Your Imagination: Visualize Imagination with Photography.',
+    competencies: [
+      'Event Concept & Theme Development',
+      'Rundown Planning & Time Management',
+      'Cross-Division Technical Coordination & Event Operations',
+    ],
+    image: '/certificates/snap-divisi-acara-2023.png',
+  },
+  {
+    badge: { label: 'Organization', styleClass: 'cert-badge-blue' },
+    year: '2023',
+    date: 'March 16, 2023',
+    title: 'Master of Ceremony (MC): Capture Your Imagination Photography Seminar',
+    issuer: 'SNAP Photography Universitas Gunadarma',
+    certNo: 'Certificate of Appreciation',
+    description: 'Certificate of appreciation for hosting and guiding the Photography Seminar Capture Your Imagination: Visualize Imagination with Photography.',
+    competencies: [
+      'Public Speaking & Stage Presence',
+      'Live Audience Engagement & Speaker Hosting',
+      'Rundown & Schedule Pacing Management',
+    ],
+    image: '/certificates/snap-pembawa-acara-2023.png',
   },
   {
     badge: { label: 'Fundamental DBMS', styleClass: 'cert-badge-blue' },

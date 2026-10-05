@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { BriefcaseBusiness, Mail } from 'lucide-react'
 
 function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -22,6 +21,12 @@ function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
+const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  e.preventDefault()
+  const el = document.getElementById(id)
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
 export function Footer() {
   return (
     <footer className="neo-footer">
@@ -33,12 +38,12 @@ export function Footer() {
         <a href="https://www.linkedin.com/in/farid-chairul-azhar/" target="_blank" rel="noopener noreferrer" className="theme-toggle" aria-label="LinkedIn Profile">
           <LinkedInIcon aria-hidden="true" />
         </a>
-        <Link href="/experience" className="theme-toggle" aria-label="Work Experience">
+        <a href="#experience" className="theme-toggle" aria-label="Work Experience" onClick={(e) => scrollTo(e, 'experience')}>
           <BriefcaseBusiness aria-hidden="true" style={{ width: 18, height: 18 }} />
-        </Link>
-        <Link href="/contact" className="theme-toggle" aria-label="Contact Farid">
+        </a>
+        <a href="#contact" className="theme-toggle" aria-label="Contact Farid" onClick={(e) => scrollTo(e, 'contact')}>
           <Mail aria-hidden="true" style={{ width: 18, height: 18 }} />
-        </Link>
+        </a>
       </div>
 
       <p>© 2026 Farid Chairul Azhar. All rights reserved.</p>
